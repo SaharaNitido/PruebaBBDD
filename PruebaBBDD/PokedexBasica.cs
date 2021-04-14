@@ -29,8 +29,8 @@ namespace PruebaBBDD
                 idActual = 1;
             }
             asignaPokemon();
-        }
 
+        }
 
 
         //boton izquierda
