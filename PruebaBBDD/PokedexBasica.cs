@@ -29,7 +29,6 @@ namespace PruebaBBDD
                 idActual = 1;
             }
             asignaPokemon();
-
         }
 
 
