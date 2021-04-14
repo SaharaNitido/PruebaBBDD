@@ -35,8 +35,28 @@ namespace PruebaBBDD
             catch (MySqlException e){
                 throw e;
             }
-        }
 
+        }
+        public DataTable getPokemonPorId(int _id)
+        {
+            //como un if else pero para evitar errores
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM pokemon WHERE id='" + _id + "'", conexion);
+                MySqlDataReader resultado = consulta.ExecuteReader(); //Guarda el resuldado de la quarry (consulta)
+                DataTable pokemons = new DataTable(); // Formato que espera el datagridview
+                pokemons.Load(resultado);
+                conexion.Close();
+                return pokemons;
+
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+
+        }
 
     }
 
