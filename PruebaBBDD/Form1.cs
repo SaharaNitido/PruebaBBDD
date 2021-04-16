@@ -12,6 +12,7 @@ namespace PruebaBBDD
 {
     public partial class Form1 : Form
     {
+
         Conexion miConexion = new Conexion(); //esta variable es del tipo que hemos creado
                                               // para conectarnos a la BBDD MySql
 
